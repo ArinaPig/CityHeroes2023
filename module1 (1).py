@@ -4,6 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 import speech_recognition as sr
 
+
 def del1():
     t1['state'] = tk.NORMAL
     t1.delete(1.0, 'end')
@@ -28,12 +29,11 @@ def del1():
             return t;
 
     while lis1 == 1:
-        l1=listen()
+        l1 = listen()
         print(l1)
         if len(l1.split()) > 4:
             l2.append(l1)
         lab1['text'] = l2
-
 
 
 def stih():
@@ -60,7 +60,6 @@ def stih():
     t1['state'] = tk.DISABLED
 
 
-
 root = tk.Tk()
 
 root.geometry('1300x450+900+100')
@@ -71,7 +70,6 @@ e.place(x=160, y=50)
 b2 = tk.Button(root, text='Найти', command=stih)
 b2.place(x=300, y=50)
 
-
 t1 = tk.Text(root, width=50, height=15, bg='lightgrey', state=tk.DISABLED)
 t1.place(x=160, y=85)
 
@@ -80,12 +78,11 @@ scroll.place(x=560, y=85, height=245)
 
 t1.config(yscrollcommand=scroll.set)
 
-lab1 = tk.Label(bg='grey', width=100, height=15 )
+lab1 = tk.Label(bg='grey', width=100, height=15)
 lab1.place(x=590, y=90)
 
 image = ImageTk.PhotoImage(file="knopka3.png")
 tk.Button(root, image=image, command=del1).place(x=15, y=140)
-
 
 lab3 = tk.Label(bg='grey', text="Выделение:", font='Times 13', height=3, width=9)
 lab3.place(x=590, y=90)
