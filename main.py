@@ -61,8 +61,8 @@ def stih():
 
 
 root = tk.Tk()
-
 root.geometry('1300x450+900+100')
+root.title('PoemCheck')
 
 e = tk.Entry(root, width=20)
 e.place(x=160, y=50)
